@@ -41,10 +41,11 @@ function getTotalBooksCount(books) {
                             
     }
     
-    resultArr.sort((a,b)=> a.count > b.count ? -1 : 1).slice(0,5);
-    let topFive = resultArr.slice(0,5);
-    
-    return topFive;
+    function topFive(){
+      let topFiveResult = resultArr.sort((a,b)=> a.count > b.count ? -1 : 1).slice(0,5);
+    return topFiveResult;
+    }
+    return topFive();
   }
   
   //=====================================
