@@ -13,18 +13,8 @@ function getTotalBooksCount(books) {
   //=========================================
   
   
-  function getBooksBorrowedCount(books) {
-     
-  let result = 0;
-
-  books.filter((book)=>{
-    book.borrows.forEach((borrow)=>{
-      if(borrow.returned == false){
-        result += 1;
-      }
-    })
-  })
-     return result;
+  function getBooksBorrowedCount(books) { 
+    return books.reduce((acc, book) => (acc + (!book.borrows[0].returned)), 0);
   }
 
   //=======================================
