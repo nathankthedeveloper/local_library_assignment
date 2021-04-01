@@ -60,13 +60,11 @@ function getTotalBooksCount(books) {
   
   //=========================================
   
-  
-  // Need to fix the result;
   function getMostPopularAuthors(books, authors) {
   
     let result = [];
 
-    books.sort((bookOne, bookTwo) => bookOne.borrows.length > bookTwo.borrows.length ? -1 : 1 )
+    books.sort((bookOne, bookTwo) => bookOne.borrows.length > bookTwo.borrows.length ? -1 : 1 );
     
   result = books.slice(0,5);
   
@@ -76,12 +74,12 @@ function getTotalBooksCount(books) {
   for(let book of result){
     for(let author of authors){
   
-     const authorName = author.name.first + " " + author.name.last
+     const authorName = author.name.first + " " + author.name.last;
   
       if(book.authorId == author.id){
         book.author = author;
   
-        popularAuthors.push({name: `${authorName}`, count: book.borrows.length})
+        popularAuthors.push({name: `${authorName}`, count: book.borrows.length});
   
          }
       }
@@ -91,10 +89,8 @@ function getTotalBooksCount(books) {
    
   return finalResult;
   
-  }
+  };
 
-
-//=============================================
 
 module.exports = {
   getTotalBooksCount,
