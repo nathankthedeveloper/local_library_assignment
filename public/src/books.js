@@ -14,7 +14,7 @@ function findAuthorById(authors, id) {
   }
   
   function partitionBooksByBorrowedStatus(books) {
-    console.log(books);
+   
     let borrowed = [];
     let returned = [];
 
