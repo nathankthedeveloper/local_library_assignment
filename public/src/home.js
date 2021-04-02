@@ -69,7 +69,6 @@ function getTotalBooksCount(books) {
   result = books.slice(0,5);
   
   let popularAuthors = [];
-  let finalResult = [];
   
   for(let book of result){
     for(let author of authors){
@@ -82,12 +81,10 @@ function getTotalBooksCount(books) {
         popularAuthors.push({name: `${authorName}`, count: book.borrows.length});
   
          }
-      }
-        result = popularAuthors;
-        finalResult = result; 
+      } 
     }
    
-  return finalResult;
+  return popularAuthors;
   
   };
 
